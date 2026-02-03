@@ -23,7 +23,7 @@ $ flux create source helm prometheus \                                          
     --namespace=flux-system
 
 $ flux create helmrelease prometheus \
-    --chart=redis \
+    --chart=prometheus \
     --source=HelmRepository/prometheus \
     --chart-version="28.8.0" \
     --interval=10m \
