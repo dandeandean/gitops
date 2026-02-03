@@ -12,3 +12,21 @@ $ flux bootstrap github \
   --personal \
   --private=false
 ```
+
+
+## Prometheus
+
+```bash
+$ flux create source helm prometheus \                                                                                                                                  130 ↵
+    --url=https://prometheus-community.github.io/helm-charts \
+    --interval=10m \
+    --namespace=flux-system
+
+$ flux create helmrelease prometheus \
+    --chart=redis \
+    --source=HelmRepository/prometheus \
+    --chart-version="28.8.0" \
+    --interval=10m \
+    --namespace=monitoring \
+    --export > infrastructure/configs/prom-release.yaml
+```
