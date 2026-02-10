@@ -17,7 +17,7 @@ $ flux bootstrap github \
 ## Prometheus
 We need to add the HelmRepository, & HelmRelease to the monitoring namespace.
 ```bash
-$ flux create source helm prometheus \                                                                                                                                  130 ↵
+$ flux create source helm prometheus \
     --url=https://prometheus-community.github.io/helm-charts \
     --interval=10m \
     --namespace=monitoring
