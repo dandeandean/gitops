@@ -26,16 +26,14 @@ $ flux create helmrelease prometheus \
     --chart=prometheus \
     --source=HelmRepository/prometheus \
     --chart-version="28.8.0" \
-    --interval=10m \
+    --interval=1m \
     --namespace=monitoring \
-    --export > infrastructure/configs/prom-release.yaml
+    --export
 
-# Not sure why this last one is necessary
-# Seems like the repo watch is not set up properly
 $ flux create helmrelease prometheus \
     --chart=prometheus \
     --source=HelmRepository/prometheus \
     --chart-version="28.8.0" \
-    --interval=10m \
+    --interval=1m \
     --namespace=monitoring
 ```
