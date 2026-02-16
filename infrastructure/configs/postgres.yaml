@@ -21,10 +21,10 @@ metadata:
 spec:
   chart:
     spec:
-      chart: postgres
+      chart: postgres-operator
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: postgres
-      version: 1.15.0
+      version: 1.15.1
   interval: 10m0s
