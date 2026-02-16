@@ -3,7 +3,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - gateway.yaml
-- grafana.yml
-- kustomization.yaml
+- grafana.yaml
 - postgres.yaml
 - prometheus.yaml
