@@ -21,7 +21,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana
-      version: 11.1.7
+      version: 10.5.15
   interval: 10m0s
   values:
     route:
