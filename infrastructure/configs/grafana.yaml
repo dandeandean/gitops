@@ -29,14 +29,11 @@ spec:
         enabled: false
         apiVersion: gateway.networking.k8s.io/v1
         kind: HTTPRoute
-        annotations: {}
-        labels: {}
-        hostnames: []
         parentRefs:
         - name: traefik
           sectionName: http
           kind: Gateway
         matches:
-          - path:
-              type: PathPrefix
-              value: /graf
+        - path:
+            type: PathPrefix
+            value: /graf
