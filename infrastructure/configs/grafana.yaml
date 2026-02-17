@@ -21,8 +21,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana
-      version: 10.5.15
-  interval: 1m0s
+      version: 11.1.7
+  interval: 10m0s
   values:
     route:
       main:
@@ -39,4 +39,4 @@ spec:
         matches:
           - path:
               type: PathPrefix
-              value: /
+              value: /graf
