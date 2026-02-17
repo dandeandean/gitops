@@ -24,20 +24,19 @@ spec:
       version: 10.5.15
   interval: 1m0s
   values:
-    global:
-      route:
-        main:
-          enabled: false
-          apiVersion: gateway.networking.k8s.io/v1
-          kind: HTTPRoute
-          annotations: {}
-          labels: {}
-          hostnames: []
-          parentRefs:
-          - name: traefik
-            sectionName: http
-            kind: Gateway
-          matches:
-            - path:
-                type: PathPrefix
-                value: /
+    route:
+      main:
+        enabled: false
+        apiVersion: gateway.networking.k8s.io/v1
+        kind: HTTPRoute
+        annotations: {}
+        labels: {}
+        hostnames: []
+        parentRefs:
+        - name: traefik
+          sectionName: http
+          kind: Gateway
+        matches:
+          - path:
+              type: PathPrefix
+              value: /
