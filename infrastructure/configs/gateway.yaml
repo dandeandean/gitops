@@ -14,8 +14,6 @@ spec:
         web:
           port: 8000
           protocol: HTTP
-          namespacePolicy:
-            from: All
 
 # --- This gets created by ^^
 # apiVersion: gateway.networking.k8s.io/v1
