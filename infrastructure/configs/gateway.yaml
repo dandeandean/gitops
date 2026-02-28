@@ -9,6 +9,12 @@ spec:
     providers:
       kubernetesGateway:
         enabled: true
+    ports:
+      defaultgateway:
+        port: 80
+        expose: true
+        exposedPort: 80
+        protocol: HTTP
 # --- This gets created by ^^
 # apiVersion: gateway.networking.k8s.io/v1
 # kind: GatewayClass
