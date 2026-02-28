@@ -29,11 +29,19 @@ spec:
         enabled: false
         apiVersion: gateway.networking.k8s.io/v1
         kind: HTTPRoute
-        parentRefs:
-        - name: traefik
-          sectionName: http
-          kind: Gateway
-        matches:
-        - path:
-            type: PathPrefix
-            value: /graf
+        rules:
+        - parentRefs:
+          - name: traefik-gateway
+            namespace: kube-system
+            sectionName: http
+            kind: Gateway
+          matches:
+          - path:
+              type: PathPrefix
+              value: /
+          backendRefs:
+          - group: ""
+            kind: Service
+            name: grafana
+            port: 80
+            weight: 1
