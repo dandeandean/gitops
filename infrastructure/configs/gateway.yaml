@@ -27,4 +27,4 @@ spec:
   listeners:
   - name: http
     protocol: HTTP
-    port: 8000
+    port: 80
