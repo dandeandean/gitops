@@ -18,8 +18,8 @@ spec:
       version: "0.14.0"
       sourceRef:
         kind: HelmRepository
-        name: arc-charts
-        namespace: flux-system
+        name: arc
+        namespace: arc-system
   interval: 30m0s
   install:
     remediation:
