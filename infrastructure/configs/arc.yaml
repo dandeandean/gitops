@@ -31,3 +31,6 @@ spec:
   interval: 10m0s
   install:
     createNamespace: true
+  values:
+    scope:
+      watchNamespace: arc-runners
