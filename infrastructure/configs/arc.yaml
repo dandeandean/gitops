@@ -27,10 +27,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: arc
-      version: "0.14.0"
+      version: "0.13.1"
   interval: 10m0s
   install:
     createNamespace: true
-  values:
-    scope:
-      watchNamespace: arc-runners
