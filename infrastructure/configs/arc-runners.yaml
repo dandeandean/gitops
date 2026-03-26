@@ -1,15 +1,15 @@
 # Need to create secret as described in https://docs.github.com/en/actions/how-tos/manage-runners/use-actions-runner-controller/authenticate-to-the-api
-# ---
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: arc-runners
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: arc-runners
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: arc-runner-set
-  namespace: arc-systems
+  namespace: arc-runners
 spec:
   releaseName: arc-runner-set
   chart:
@@ -29,7 +29,7 @@ spec:
     githubConfigSecret: gh-secret
     controllerServiceAccount:
       namespace: arc-systems
-      name: gha-runner-scale-set-controller
+      name: arc-gha-rs-controller
     template:
       spec:
         containers:
