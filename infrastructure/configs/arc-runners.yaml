@@ -1,4 +1,5 @@
 # Need to create secret as described in https://docs.github.com/en/actions/how-tos/manage-runners/use-actions-runner-controller/authenticate-to-the-api
+# Actually it needs to be pre-defined-secret
 ---
 apiVersion: v1
 kind: Namespace
