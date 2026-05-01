@@ -27,7 +27,7 @@ spec:
       retries: 3
   values:
     githubConfigUrl: "https://github.com/dandeandean"
-    githubConfigSecret: gh-secret
+    githubConfigSecret: pre-defined-secret
     controllerServiceAccount:
       namespace: arc-systems
       name: arc-gha-rs-controller
