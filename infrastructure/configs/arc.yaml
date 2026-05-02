@@ -27,7 +27,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: arc
-      version: "0.13.1"
+      version: latest
   interval: 10m0s
   install:
     createNamespace: true

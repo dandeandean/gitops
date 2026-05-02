@@ -16,7 +16,7 @@ spec:
   chart:
     spec:
       chart: gha-runner-scale-set
-      version: "0.13.1"
+      version: latest
       sourceRef:
         kind: HelmRepository
         name: arc
