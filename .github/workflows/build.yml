@@ -20,4 +20,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: |
+        set -e
+        apt-get update && apt-get install kubectl -y
         kubectl get nodes
