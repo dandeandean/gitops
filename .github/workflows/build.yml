@@ -19,4 +19,5 @@ jobs:
     runs-on: arc-runner-set
     steps:
     - uses: actions/checkout@v4
-    - run: echo "Running on my own machine!"
+    - run: |
+        kubectl get nodes
