@@ -13,25 +13,25 @@ metadata:
 spec:
   interval: 1h0m0s
   url: https://istio-release.storage.googleapis.com/charts
-# ---
-# apiVersion: helm.toolkit.fluxcd.io/v2beta1
-# kind: HelmRelease
-# metadata:
-#   name: istio-base
-#   namespace: istio-system
-#   labels:
-#     app.kubernetes.io/part-of: istio
-# spec:
-#   releaseName: istio-base
-#   install:
-#     crds: Create
-#   upgrade:
-#     crds: CreateReplace
-#   chart:
-#     spec:
-#       version: 1.30.1
-#       chart: base
-#       sourceRef:
-#         kind: HelmRepository
-#         name: istio
-#   interval: 1h0m0s
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-base
+  namespace: istio-system
+  labels:
+    app.kubernetes.io/part-of: istio
+spec:
+  releaseName: istio-base
+  install:
+    crds: Create
+  upgrade:
+    crds: CreateReplace
+  chart:
+    spec:
+      version: 1.19.3
+      chart: base
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+  interval: 1h0m0s
