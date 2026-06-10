@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: istio-system
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: istio
@@ -14,7 +14,7 @@ spec:
   interval: 1h0m0s
   url: https://istio-release.storage.googleapis.com/charts
 ---
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: istio-base
