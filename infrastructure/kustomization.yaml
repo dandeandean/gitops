@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - configs
 - istio
+- traefik
