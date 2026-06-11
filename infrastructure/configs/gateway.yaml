@@ -15,7 +15,21 @@ spec:
           port: 8000
           protocol: HTTP
           namespacePolicy: All
-
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: api-gateway
+  namespace: kube-system
+spec:
+  gatewayClassName: traefik
+  listeners:
+  - name: web
+    port: 8888
+    protocol: HTTP
+    allowedRoutes:
+      namespaces:
+        from: All
 # --- This gets created by ^^
 # apiVersion: gateway.networking.k8s.io/v1
 # kind: GatewayClass
