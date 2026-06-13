@@ -117,7 +117,6 @@ spec:
     # https://istio.io/latest/docs/ambient/install/platform-prerequisites/#k3s
     global:
       platform: k3s
-    ambient:
-      enabled: true
-      configDir: /var/lib/rancher/k3s/agent/etc/cni/net.d
-      binDir: /var/lib/rancher/k3s/data/current/bin
+    cni:
+      cniConfDir: /var/lib/rancher/k3s/agent/etc/cni/net.d
+      cniBinDir: /var/lib/rancher/k3s/data/current/bin
