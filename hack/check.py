@@ -49,10 +49,11 @@ def check_kust(path_to: str) -> bool:
     return result_code
 
 def main(_: list[str]) -> int:
+    exit_code = 0
     for k in find_kust_paths():
         if not check_kust(k):
-            return 1
-    return 0
+            exit_code = 1
+    return exit_code
 
 
 if __name__ == "__main__":
