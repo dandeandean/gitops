@@ -11,6 +11,6 @@ spec:
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
-        name: alloy
+        name: grafana
       version: 1.11.0
   interval: 10m0s
