@@ -24,3 +24,11 @@ spec:
         namespace: monitoring
       version: 1.11.0
   interval: 10m0s
+  values:
+    alloy:
+      configMap:
+        content: |-
+          logging {
+            level = "info"
+            format = "logfmt"
+          }
