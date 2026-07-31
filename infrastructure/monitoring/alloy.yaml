@@ -32,3 +32,9 @@ spec:
             level = "info"
             format = "logfmt"
           }
+          discovery.kubernetes "pod" {
+            role = "pods"
+          }
+          prometheus.echo "echo" {
+            format = "text"
+          }
